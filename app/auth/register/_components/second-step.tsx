@@ -57,7 +57,7 @@ export default function SecondStep({ payload }: SecondStepProps) {
     onSuccess: async () => {
       toast.success("Your account has been created successfully");
       await queryClient.invalidateQueries({queryKey: [sessionKey]})
-      window.location.href = '/'
+      // window.location.href = '/'
     },
     onError: (e) => {
       toast.error(e.message || "Something went wrong");
