@@ -20,7 +20,7 @@ export default function LoginForm() {
   const router = useRouter();
   const mutation = useMutation({
     mutationFn: async (data: z.infer<typeof loginSchema>) => {
-      const res = await axiosInstance.post("http://localhost:3001/auth/login", {
+      const res = await axiosInstance.post("/auth/login", {
         email: data.email,
         password: data.password,
       });

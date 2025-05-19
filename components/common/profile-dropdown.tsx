@@ -14,10 +14,10 @@ export default function ProfileDropDown() {
   const mutation = useLogOut();
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild className="h-[50px] hidden lg:flex">
+      <DropdownMenuTrigger asChild className="h-[50px] lg:flex">
         <Button
           variant={"outline"}
-          className={`flex items-center gap-2 h-full px-4 text-primary`}
+          className={`lg:flex items-center hidden gap-2 h-full px-4 text-primary`}
         >
           <User size={20} />
           Profile

@@ -32,7 +32,7 @@ export default function ResetPasswordForm() {
       token: string;
     }) => {
       const res = await axiosInstance.post(
-        "http://localhost:3001/auth/reset-password",
+        "auth/reset-password",
         {
           password: data.password,
           confirmPassword: data.confirmPassword,

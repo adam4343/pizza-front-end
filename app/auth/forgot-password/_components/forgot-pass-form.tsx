@@ -16,7 +16,7 @@ export default function ForgotPasswordForm() {
   const mutation = useMutation({
     mutationFn: async (data: z.infer<typeof forgotPasswordSchema>) => {
       const res = await axiosInstance.post(
-        "http://localhost:3001/auth/forgot-password",
+        "/auth/forgot-password",
         {
           email: data.email,
         }
