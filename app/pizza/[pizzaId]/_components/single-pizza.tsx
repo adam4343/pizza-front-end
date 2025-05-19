@@ -87,16 +87,7 @@ export default function SinglePizza({
       </div>
 
       <div className="flex flex-col gap-6 w-full max-w-xl mx-auto lg:mx-0">
-        <div>
-          <Title
-            size="2xl"
-            className="text-2xl md:text-3xl font-extrabold mb-2"
-            text={`${pizza.name}`}
-          />
-          <p className="text-muted-foreground text-sm md:text-base">
-            25 см, традиционное тесто 25, 380 г
-          </p>
-        </div>
+    
 
         <PizzaAttributes
           currentVariation={currentVariation.pizzaVariation}

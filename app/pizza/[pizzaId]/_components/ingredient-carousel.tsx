@@ -15,7 +15,7 @@ export default function IngredientCarousel({
   currentVariation: TPizzaVariation;
 }) {
   return (
-    <Carousel className="w-full max-w-full">
+    <Carousel className="w-full max-w-full px-6 lg:px-0">
       <CarouselContent>
         {currentVariation.pizzaVariationToAdditional?.map((ingredient, id) => (
           <CarouselItem

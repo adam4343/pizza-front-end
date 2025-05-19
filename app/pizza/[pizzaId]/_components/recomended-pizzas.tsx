@@ -20,11 +20,11 @@ export default function RecomendedPizzas({pizza}: {pizza: TPizza}) {
         }
     })
   return (
-    <Carousel className="w-full">
+    <Carousel className="w-full px-6">
       <CarouselContent>
         {
             query.data?.map((currentPizza, id) => (
-                <CarouselItem className="basis-1/2 sm:basis-1/3 md:basis-1/4" key={id}>
+                <CarouselItem className="basis-full sm:basis-1/3 md:basis-1/4" key={id}>
                     <ProductCard pizza={currentPizza} />
                 </CarouselItem>
             ))

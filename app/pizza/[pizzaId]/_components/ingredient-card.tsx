@@ -35,7 +35,7 @@ export default function IngredientCard({
         "additionalIngredients",
         JSON.stringify(newList)
       );
-      router.push(`?${additionalSearchParams.toString()}`);
+      router.replace(`?${additionalSearchParams.toString()}`);
     } catch (e) {
       console.error(e);
     }
