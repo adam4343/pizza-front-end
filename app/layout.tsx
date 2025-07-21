@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/shared/provider";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const nunito = Nunito({
   subsets: ["latin", "cyrillic"],
