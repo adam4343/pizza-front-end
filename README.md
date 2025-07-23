@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Pizza Frontend (Next.js + Tailwind + TypeScript)
 
-## Getting Started
+This is the **frontend** for a full-stack pizza ordering platform, built using **Next.js App Router** and fully powered by a custom **Express backend**. It includes a modern, responsive UI, real-time filtering, cart + order system, and advanced authentication (custom JWT + Google Login).
 
-First, run the development server:
+> ⚠️ **Note:** The backend server may take up to **10 seconds** to respond on the first request due to cold start (hosted on a free-tier server). Please be patient during the initial load.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💎 My Best & Hardest Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is the **biggest, most challenging, and most complete project** I’ve built to date. It includes everything from authentication, state management, API integration, user experience, and data modeling — and taught me how to connect every layer of a real-world full-stack app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I've built both the **frontend and backend** from scratch and connected every piece myself.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔐 Authentication
+- ✅ JWT-based login & signup
+- 🔁 Auto login via token refresh
+- 🔐 **Google OAuth Login** with `@react-oauth/google`
+- 🧩 Multi-step registration form (email → password → confirm)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🍕 Pizza Catalog
+- All data loaded from **Express backend**
+- Each pizza supports:
+  - Selectable **size** and **dough**
+  - Toggleable **ingredients**
+  - Add **additional ingredients**
+  - Live price updates based on selection
 
-## Deploy on Vercel
+### 🔍 Filters + Search
+- Filters: price & ingredients
+- **Connected to backend** — only show pizzas that match
+- Fully synced with `useSearchParams` (URL reflects filter state)
+- Instant, client-side UI update on filter change
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🛒 Shopping Cart & Orders
+- Add/remove/update items in real time
+- **Global cart state** via Zustand
+- Cart persists through navigation
+- Order page with:
+  - Cart review
+  - User contact info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 💬 UX Features
+- Beautiful toast notifications with **Sonner**
+- Loading bar via `next-nprogress-bar`
+- Smooth UX even when the backend is sleeping
+- Clean transitions, consistent layout, and error handling
+
+---
+
+## 🧰 Tech Stack
+
+| Tool / Library        | Purpose                                      |
+|------------------------|----------------------------------------------|
+| **Next.js**            | App Router, SSR, Routing                     |
+| **TypeScript**         | Type-safe codebase                           |
+| **Tailwind CSS**       | Styling + design system                      |
+| **Zustand**            | Global state (auth, cart, UI)                |
+| **TanStack Query**     | API data caching + mutations                 |
+| **Axios**              | API requests                                 |
+| **Zod**                | Schema validation for forms                  |
+| **Sonner**             | Toasts / user feedback                       |
+| **@react-oauth/google**| Google Login                                 |
+| **Next NProgress Bar** | Visual route loader                          |
+
+---
+
+## 🔁 Fully Connected to Express Backend
+
+Every piece of data — pizzas, ingredients, filters, cart, orders, user — is served and managed by a **custom-built Express + SQLite backend**.
+
+Backend features:
+- Custom JWT system
+- Google OAuth
+- REST API for pizzas, filters, cart, orders
+- Drizzle ORM with SQLite
+
+Frontend and backend are tightly integrated for full control and performance.
+
+---
