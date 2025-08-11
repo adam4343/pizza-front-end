@@ -1,5 +1,7 @@
 # 🍕 Pizza Frontend (Next.js + Tailwind + TypeScript)
 
+**Live demo:** [https://next-pizza-black.vercel.app/](https://next-pizza-black.vercel.app/)
+
 This is the **frontend** for a full-stack pizza ordering platform, built using **Next.js App Router** and fully powered by a custom **Express backend**. It includes a modern, responsive UI, real-time filtering, cart + order system, and advanced authentication (custom JWT + Google Login).
 
 > ⚠️ **Note:** The backend server may take up to **10 seconds** to respond on the first request due to cold start (hosted on a free-tier server). Please be patient during the initial load.
@@ -81,4 +83,3 @@ Backend features:
 
 Frontend and backend are tightly integrated for full control and performance.
 
----
